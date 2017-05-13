@@ -17,7 +17,8 @@ $(document).ready(function(){
 	//I can probably just reuse this callback function for all 10 questions by passing in an ID for "question1."
 	$(".question1").on("click", function() { //when something in question 1 is pressed
 		unanswered--; //decrease number of unanswered questions.
-		$(".question1").prop('disabled', true); //adds disabled property to all this question's buttons.
+		$(".question1").prop('disabled', true);
+		$(".question1").addClass("clicked"); //adds disabled property to all this question's buttons.
 		if($(".question1").val("true")) { //If the button had a value of true - add to correct.
 			correct++;
 			console.log(correct);
